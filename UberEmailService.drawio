@@ -1,11 +1,11 @@
-<mxfile host="drawio-plugin" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2024-07-31T18:58:40.549Z" version="22.1.22" etag="BozZi97DXHFO_1euyv4s" type="embed">
+<mxfile host="drawio-plugin" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36" modified="2024-08-01T19:19:51.678Z" etag="2ZjxxbuAJ6qr2FamIjm8" version="22.1.22" type="embed">
   <diagram name="Page-1" id="4jpqiuBLFit9PhiXddBy">
-    <mxGraphModel dx="2314" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1569" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="ws-vOIrRcfvoXX8yQjIc-5" value="SendEmailController" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
-          <mxGeometry x="190" y="170" width="200" height="90" as="geometry">
+          <mxGeometry x="190" y="170" width="200" height="110" as="geometry">
             <mxRectangle x="210" y="170" width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
@@ -16,7 +16,7 @@
           <mxGeometry y="52" width="200" height="8" as="geometry" />
         </mxCell>
         <mxCell id="EF_XjzuxJkAvIcU-h72x-19" value="mailService: EmailProviderInterface " style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="ws-vOIrRcfvoXX8yQjIc-5" vertex="1">
-          <mxGeometry y="60" width="200" height="30" as="geometry" />
+          <mxGeometry y="60" width="200" height="50" as="geometry" />
         </mxCell>
         <mxCell id="EF_XjzuxJkAvIcU-h72x-5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="EF_XjzuxJkAvIcU-h72x-3" target="EF_XjzuxJkAvIcU-h72x-6" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -118,6 +118,9 @@
         </mxCell>
         <mxCell id="EF_XjzuxJkAvIcU-h72x-61" value="+ method(type): type" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="EF_XjzuxJkAvIcU-h72x-58" vertex="1">
           <mxGeometry y="60" width="160" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="2" value="todo: refactor. Structure is going different" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="-170" y="220" width="240" height="30" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
