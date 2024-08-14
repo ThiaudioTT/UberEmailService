@@ -1,14 +1,33 @@
 package com.uberchallenge.UberEmailService.domain.service;
 
 import com.uberchallenge.UberEmailService.domain.Email;
+import com.uberchallenge.UberEmailService.domain.service.services.AmazonSes;
+import com.uberchallenge.UberEmailService.infra.exceptions.SendEmailException;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import javax.swing.*;
+import java.util.List;
 
 @Service
 public class EmailServiceManager {
 
+    @Autowired
+    private List<EmailProviderInterface> emailProviders;
 
     public void sendEmail(Email email) {
-        // Send email using one of the email providers
-        System.out.println("Email sent to: " + email.getTo());
+
+        for(EmailProviderInterface pr : this.emailProviders) {
+            try {
+                pr.sendEmail(email);
+                System.out.println("Email sent to: " + email.getTo() + " using " + pr.getClass().getSimpleName());
+                return;
+            } catch (Exception e) {
+                System.out.println("Error sending email using: " + pr.getClass().getName() + ". Error: " + e.getMessage());
+            }
+        }
+
+        // oops, all email providers failed
+        throw new SendEmailException("Error sending email to: " + email.getTo());
     }
 }
