@@ -4,6 +4,7 @@ import com.amazonaws.services.simpleemail.AmazonSimpleEmailService;
 import com.amazonaws.services.simpleemail.model.*;
 import com.uberchallenge.UberEmailService.domain.Email;
 import com.uberchallenge.UberEmailService.domain.service.EmailProviderInterface;
+import com.uberchallenge.UberEmailService.infra.exceptions.SendEmailException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
@@ -18,7 +19,7 @@ public class AmazonSes implements EmailProviderInterface {
     private String sender;
 
     @Override
-    public void sendEmail(Email email) {
+    public void sendEmail(Email email) throws SendEmailException {
         SendEmailRequest request = new SendEmailRequest()
                 .withDestination(new Destination().withToAddresses(email.getTo()))
                 .withMessage(new Message()
