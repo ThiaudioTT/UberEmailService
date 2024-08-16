@@ -18,6 +18,7 @@ public class EmailServiceManager {
     public void sendEmail(Email email) {
 
         for(EmailProviderInterface pr : this.emailProviders) {
+            System.out.println("Trying to send email using: " + pr.getClass().getSimpleName());
             try {
                 pr.sendEmail(email);
                 System.out.println("Email sent to: " + email.getTo() + " using " + pr.getClass().getSimpleName());

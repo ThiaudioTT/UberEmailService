@@ -20,7 +20,7 @@ public class EmailController {
     @PostMapping("/send")
     public void sendEmail(@RequestBody @Valid EmailRequestDTO email) {
         // Send email
-        System.out.println("Email sent!");
+//        System.out.println("Email sent!");
         this.emailService.sendEmail(new Email(email));
     }
 }
