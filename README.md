@@ -6,6 +6,18 @@ And also is an Uber challenge, you can see the challenge [here](https://github.c
 
 Do not use for production purposes.
 
+
+## Running and setting up the project
+
+First, you need to obtain the API keys from the providers. See the [application.properties](src/main/resources/application.properties),
+locate these keys, and set them in the file.
+
+To run the project, you must have Java and Maven installed. Then, you can run the following command:
+
+```bash
+  mvn spring-boot:run
+```
+
 ## Sending the email
 
 With all setup done, you can now email to a user. To do this, you need to make a POST request to the `/email/send` endpoint with the following payload:
