@@ -76,6 +76,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>UberEmailService</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.asciidoctor</groupId>
